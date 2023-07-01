@@ -163,7 +163,7 @@ class medias
                                             <?php
                                             $protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"],0,strpos( $_SERVER["SERVER_PROTOCOL"],'/'))).'://';
                                             $server_name = $_SERVER["SERVER_NAME"];
-                                            $img_path = $protocol.$server_name . "/hahuweb/public/" . str_replace("../", "", $value);
+                                            $img_path = $protocol.$server_name . str_replace("../", "", $value);
                                             ?>
                                         </p>
 

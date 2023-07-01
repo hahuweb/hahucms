@@ -8,11 +8,11 @@
 */
 
 // status 
-$status = "Enable";
+$status = "";
 
 // count 
-$count = "3";
+$count = "";
 
 // minute 
-$minute = "1";
+$minute = "";
             

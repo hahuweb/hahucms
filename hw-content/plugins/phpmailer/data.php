@@ -8,18 +8,18 @@
           */
           
           // company_name 
-          $name = "Hahu Web";
+          $name = "";
           
           // host 
-          $host = "smtp.gmail.com";
+          $host = "";
 
           // host 
-          $username = "huluababa@gmail.com";
+          $username = "";
 
           // password 
-          $password = "vngzuoxnukxhilom";
+          $password = "";
 
           // port 
-          $port = "465";
+          $port = "";
 
           

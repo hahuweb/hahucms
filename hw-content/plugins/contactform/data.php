@@ -8,7 +8,7 @@
 */
 
 // status 
-$status = "Disable";
+$status = "";
 
 // page 
-$page = "contact";
+$page = "";
