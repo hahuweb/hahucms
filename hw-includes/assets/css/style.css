@@ -1,0 +1,48 @@
+/**
+Style
+
+*/
+.post .card {
+    background: none;
+    border: 1px solid rgb(68, 68, 68);
+}
+
+.post a {
+    text-decoration: none;
+}
+
+.post img {
+    height: 240px;
+}
+.related-post img {
+    width: 100%;
+    height: 200px;
+    border-radius: 4px;
+}
+
+/*
+md device
+*/
+@media only screen and (min-width: 768px) {}
+
+/*
+ * lg device
+ */
+@media only screen and (min-width: 992px) {
+
+
+    .post-view img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .related-post a {
+        width: 100%;
+    }
+
+    .related-post img {
+        width: 100%;
+        height: 120px;
+        border-radius: 4px;
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "PHP Mailer",
+	"version": "6.6.5",
+	"description": "Send emails safely and easily via PHP code from a web server",
+	"author": "PHPMailer",
+	"license": "GPL-2.0-or-later",
+	"homepage": "https://github.com/PHPMailer/PHPMailer"
+
+}

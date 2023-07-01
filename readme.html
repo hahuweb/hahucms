@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hahu Web &#8250; ReadMe</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="hw-admin/assets/img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="hw-includes/assets/css/bootstrap.min.css" />
+	<style>
+		body {
+			border: none;
+			margin: 0;
+			padding: 0;
+			background: #f1f1f1;
+		}
+
+		button {
+			background: none;
+			border: none;
+		}
+
+		.navbar {
+			background: #fff;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.navbar-brand {
+			color: #222;
+		}
+
+		.navbar-web {
+			background: rgb(197, 125, 66);
+			color: #fff;
+			border-radius: 4px;
+			padding: 2px;
+		}
+
+		.nav-link {
+			color: #000;
+		}
+
+		.nav-link:hover {
+			cursor: pointer;
+		}
+
+		.page-content {
+			margin-top: 120px;
+		}
+
+		.page-content ul li {
+			margin-top: 10px;
+			padding: 4px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="py-4"></div>
+	<h4 class="text-center display-4">
+		<a class="navbar-brand" href="#">Hahu<span class="navbar-web">Web</span></a>
+	</h4>
+	<div class="py-4"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<h4>Introduction</h4>
+				<div class="py-2"></div>
+				<p>Welcome. Hahu CMS is a web based content management system, allows users to create awesome website. This
+					document describe haw to install hahu CMS manually.</p>
+
+				<div class="py-3"></div>
+				<h4>Installation</h4>
+				<ol>
+					<li>Unzip the package and move to webserver directory.</li>
+					<li>Create database that you used on Hahu CMS.</li>
+					<li>Open hw-admin/ in your browser. It will take you through the process to set up a
+						config.php file with your database connection details.
+						<ul>
+							<li>If for some reason this does not work, Open up hw-includes/config/config-sample.php with
+								a text editor like WordPad or similar and fill in your database connection details.</li>
+							<li>Save the file as config.php and upload it.</li>
+							<li>Open hw-admin/ in your browser.</li>
+						</ul>
+					</li>
+					<li>Once the configuration file is set up, the installer will set up the tables needed for your
+						site. If there is an error, double check your config.php file, and try again. If it fails again.
+					</li>
+					<li>The installer should then send you to the login page.</li>
+
+				</ol>
+				<div class="py-3"></div>
+
+				<h4>Create Account</h4>
+				<p>Enter your username, email and password and click create. It will send you to home page.</p>
+				<div class="py-3"></div>
+
+				<h4>Updating Manually</h4>
+				<ol>
+					<li>Before you update anything, make sure you have backup copies of any files.</li>
+					<li>Download from hahuweb website</li>
+					<li>Go to setting under version click update button and update.</li>
+				</ol>
+				<div class="py-3"></div>
+
+				<h4>System Requirements</h4>
+				<ul>
+					<li><b>PHP</b> version 5.6.20 or greater.</li>
+					<li><b>MySQL</b> version 5.0 or greater.</li>
+				</ul>
+				<div class="py-3"></div>
+				<h3>Recommendations</h3>
+				<ul>
+					<li>PHP version <strong>7.4</strong> or greater.</li>
+					<li>MySQL version <strong>5.7</strong> or greater OR MariaDB version <strong>10.2</strong> or greater.</li>
+				</ul>
+				
+				<div class="py-3"></div>
+				<h4>License</h4>
+				<p>Hahu CMS is free software, and is released under the terms of the Apache License version 2 any later
+					version. See <a href="license.txt">license.txt</a></p>
+			</div>
+		</div>
+	</div>
+	<script src="hw-includes/assets/js/jquery-3.1.0.min.js"></script>
+	<script src="hw-includes/assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

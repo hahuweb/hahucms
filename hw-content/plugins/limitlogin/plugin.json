@@ -1,0 +1,7 @@
+{
+    "name": "Limit Login",
+	"version": "1.0.0",
+	"description": "Limit login attempt for admin users",
+	"author": "Hahuweb",
+	"license": "GPL-2.0-or-later"
+}

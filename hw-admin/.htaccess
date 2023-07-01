@@ -1,0 +1,24 @@
+# Apache configuration file 
+
+
+# disable directory listing
+Options -Indexes
+RewriteEngine On
+
+
+# hide htacess
+<Files .htacess>
+Order allow,deny
+Deny from all
+</Files>
+
+# allow and deny ip address 
+#Order Allow,Deny
+#Deny from all
+#Allow from all
+
+
+# hidden files
+RedirectMatch 404 /\..*$
+
+
