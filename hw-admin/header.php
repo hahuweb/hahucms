@@ -57,7 +57,7 @@ if (isset($_SESSION['ID'])) {
 
         <body>
 
-            <!-- preloader -->
+            <!-- preloader
             <div class="preloader">
                 <div class="d-flex justify-content-center">
                     <div class="spinner-border" role="status">
@@ -65,7 +65,7 @@ if (isset($_SESSION['ID'])) {
                     </div>
                 </div>
             </div>
-            <!-- end preloader -->
+            end preloader -->
 
             <nav class="navbar fixed-top navbar-expand-lg">
                 <div class="container-fluid">

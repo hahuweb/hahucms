@@ -18,20 +18,20 @@ class signup extends values
         $this->db_connect();
         $this->getValue();
         $this->signupVal();
+        $this->lastlogin();
+        $this->loginAt();
         $this->role();
         $this->verify();
         $this->status();
         $this->getLocation();
         $this->get_device();
         $this->insert();
-
         $this->db_close();
     }
     public function insert()
     {
         if (empty($this->error)) {
-            $this->user_status = 'active';
-            $tsql = "INSERT INTO hw_users (username, email_phone, user_password, user_role, verification, user_location, user_device, user_status, reg_date) VALUES ('$this->username', '$this->email_phone', '$this->password_hash', '$this->user_role', '$this->verification', '$this->user_location', '$this->user_device', '$this->user_status',  '$this->reg_date') ";
+            $tsql = "INSERT INTO hw_users (username, email_phone, user_password, user_role, verification, last_login, user_location, user_device, user_status, login_at, reg_date) VALUES ('$this->username', '$this->email_phone', '$this->password_hash', '$this->user_role', '$this->verification', '$this->last_login', '$this->user_location', '$this->user_device', '$this->user_status', '$this->login_at', '$this->reg_date') ";
             mysqli_set_charset($this->conn, "utf8");
             $result = mysqli_query($this->conn, $tsql);
             if ($result == TRUE) {
@@ -42,7 +42,7 @@ class signup extends values
 
     public function select()
     {
-        $tsql_in = "SELECT * FROM hw_users WHERE username = '$this->username'  ";
+        $tsql_in = "SELECT * FROM hw_users WHERE username = '$this->username'";
         mysqli_set_charset($this->conn, "utf8");
         $result_in = $this->conn->query($tsql_in);
         $row = mysqli_fetch_array($result_in);
@@ -52,20 +52,31 @@ class signup extends values
         }
     }
 
+    public function lastlogin() {
+        $this->last_login = date("y-m-d");
+        return $this->last_login;
+    }
     public function role()
     {
         $this->user_role = 'Administrator';
         return $this->user_role;
     }
+
     public function verify()
     {
         $this->verification = 'OFF';
         return $this->verification;
     }
+
     public function status()
     {
         $this->user_status = 'active';
         return $this->user_status;
+    }
+    public function loginAt()
+    {
+        $this->login_at = date("y-m-d h:i:sa");
+        return $this->login_at;
     }
 }
 
@@ -122,7 +133,7 @@ class login extends values
 
                 echo $this->attempt();
             }
-           
+
             $stmt->close();
         }
     }
@@ -437,7 +448,7 @@ class limitLogin extends values
 
         if (file_exists('../../hw-content/plugins/limitlogin/data.php')) {
             require '../../hw-content/plugins/limitlogin/data.php';
-            if($status == 'Enable'){
+            if ($status == 'Enable') {
                 $minutes = $minute * 60;
                 $attempt = $this->limit_attempt('hw_login_attempt', $this->getLocation());
                 $rows_attempt = ($attempt);

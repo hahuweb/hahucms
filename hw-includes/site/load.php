@@ -26,10 +26,10 @@ require_once  'hw-includes/app/class-pages.php';
 require_once 'hw-includes/function.php';
 
 // site information and pages data
-require_once  'site.php';
+require_once  'hw-includes/site/site.php';
 
 // post
-require_once  'post.php';
+require_once  'hw-includes/site/post.php';
 
 // plugins
-require_once  'plugins.php';
+require_once  'hw-includes/site/plugins.php';

@@ -27,7 +27,7 @@
 
 <body>
 
-    <!-- preloader -->
+    <!-- preloader
     <div class="preloader">
         <div class="d-flex justify-content-center">
             <div class="spinner-border" role="status">
@@ -35,4 +35,4 @@
             </div>
         </div>
     </div>
-    <!-- end preloader -->
+     end preloader -->
