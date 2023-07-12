@@ -9,6 +9,7 @@
   <a href="https://hahuweb.netlify.app/">Website</a> |
   <a href="https://hahuweb.netlify.app/themes.html">Themes</a> |
   <a href="https://hahuweb.netlify.app/plugins.html">Plugins</a> |
+  <a href="https://github.com/hahuweb/hahucms/wiki">Documentation </a>
 </p>
 
 <img src="media/hahu-theme.png">
