@@ -20,9 +20,9 @@ https://github.com/givanz/VvvebJs
 //scan media folder for all files to display in media modal
 
 if (isset($_POST['mediaPath'])) {
-	define('UPLOAD_PATH', $_POST['mediaPath']);
+	define('UPLOAD_PATH', '../../../media');
 } else {
-	define('UPLOAD_PATH', 'media');
+	define('UPLOAD_PATH', '../../../media');
 }
 
 $scandir = __DIR__ . '/' . UPLOAD_PATH;
