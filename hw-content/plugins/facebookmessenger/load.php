@@ -104,7 +104,8 @@ if (isset($_POST['save'])) {
                     <li>Finally, click the publish button.</li>
                     <li>Back to Hahu CMS Facebook Messenger setting. Select enable, copy your code, and click the save button.</li>
                 </ol>
-            </div>
+                <br />
+                <a href="<?php echo $about->homepage ?>" target="_blank">Visit Site</a>
         </div>
     </div>
 </div>
