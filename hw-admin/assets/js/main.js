@@ -21,7 +21,8 @@ $(window).on('load', function () {
             $(".preloader").css("visibility", "hidden").fadeOut();
         }, 300);
     });
-});*/
+});
+*/
 
 $('document').ready(function () {
 

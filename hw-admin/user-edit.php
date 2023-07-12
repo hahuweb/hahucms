@@ -40,7 +40,7 @@ $forms = new edit();
                     <div class="col-lg-6">
                         <?php if ($row_users['user_img'] == true) {
                         ?>
-                            <img class="user_img" src="<?php echo $row_users['user_img']; ?>" />
+                            <img class="user_img" src="../<?php echo $row_users['user_img']; ?>" />
                         <?php
                         } else {
                         ?>

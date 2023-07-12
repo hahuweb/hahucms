@@ -15,12 +15,12 @@ if(!file_exists('hw-includes/config/config.php')) {
 require_once  'hw-includes/config/config.php';
 
 // db
-require_once  'hw-includes/config/class-db.php';
+require_once  'hw-admin/app/class-db.php';
 
 // Data
-require_once  'hw-includes/app/class-users.php';
-require_once  'hw-includes/app/class-post.php';
-require_once  'hw-includes/app/class-pages.php';
+require_once  'hw-admin/app/class-users.php';
+require_once  'hw-admin/app/class-post.php';
+require_once  'hw-admin/app/class-pages.php';
 
 // function
 require_once 'hw-includes/function.php';

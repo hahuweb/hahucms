@@ -34,7 +34,7 @@ include 'header.php';
                         while ($row_all = $all_users->fetch_assoc()) {
                         ?>
                             <tr>
-                                <td><?php echo $row_all['username']; ?></td>
+                                <td><?php echo ucfirst($row_all['username']); ?></td>
                                 <td>
                                     <?php
                                     if ($row_all['last_login'] == '0000-00-00') {
@@ -45,15 +45,17 @@ include 'header.php';
                                 </td>
                                 <td>
                                     <?php
-                                    if ($row_all['user_location'] == '127.0.0.1' or $row_all['user_location'] == 'localhost') {
-                                        echo $row_all['user_location'];
-                                    } else {
-                                        $ipdat = @json_decode(file_get_contents(
-                                            "http://www.geoplugin.net/json.gp?ip=" . $row_all['user_location']
-                                        ));
-                                        echo $ipdat->geoplugin_city;
-                                        echo ', &nbsp;';
-                                        echo $ipdat->geoplugin_countryName;
+                                    if ($row_all['user_location'] == true) {
+                                        if ($row_all['user_location'] == '127.0.0.1' or $row_all['user_location'] == 'localhost') {
+                                            echo $row_all['user_location'];
+                                        } else {
+                                            $ipdat = @json_decode(file_get_contents(
+                                                "http://www.geoplugin.net/json.gp?ip=" . $row_all['user_location']
+                                            ));
+                                            echo $ipdat->geoplugin_city;
+                                            echo ', &nbsp;';
+                                            echo $ipdat->geoplugin_countryName;
+                                        }
                                     }
                                     ?>
                                 </td>

@@ -32,8 +32,7 @@
         foreach ($this->files as $key => $value) {
 
             $supported_file = array(
-                'html',
-                'php'
+                'html'
             );
             $ext = strtolower(pathinfo($value, PATHINFO_EXTENSION));
             //$path_parts = pathinfo($value);

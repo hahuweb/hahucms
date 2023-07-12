@@ -36,7 +36,7 @@ class dataValues extends dbConnect
         $this->description = filter_input(INPUT_POST, 'description');
         $this->keyword = filter_input(INPUT_POST, 'keyword');
         $this->author = filter_input(INPUT_POST, 'author');
-        $this->favicon = filter_input(INPUT_POST, 'favicon');
+        $this->favicon = str_replace("../", "", filter_input(INPUT_POST, 'favicon'));
         $this->sitePath = '../hw-includes/setting/site/site.json';
 
         $this->header = filter_input(INPUT_POST, 'header');

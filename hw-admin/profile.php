@@ -40,7 +40,7 @@ $today = date('y-m-d');
             <div class="col-lg-6">
                 <?php if ($row['user_img'] == true) {
                 ?>
-                    <img class="user_img" src="<?php echo $row['user_img']; ?>" />
+                    <img class="user_img" src="../<?php echo $row['user_img']; ?>" />
                 <?php
                 } else {
                 ?>
@@ -50,7 +50,7 @@ $today = date('y-m-d');
                 ?>
                 <br />
                 <br />
-                <h4><?php echo $row['username']; ?></h4>
+                <h4><?php echo ucfirst($row['username']); ?></h4>
                 <p><?php echo $row['email_phone']; ?></p>
 
             </div>

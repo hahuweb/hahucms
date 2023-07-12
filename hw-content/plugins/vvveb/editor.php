@@ -13,11 +13,6 @@ if (isset($_GET['page_name'])) {
   $theme = file_get_contents('../../../hw-includes/setting/site/theme.json');
   $theme_data = json_decode($theme);
 
-  /*$htmlFiles = "../../../hw-includes/pages/".$page_name."";
-  $pathInfo = pathinfo($htmlFiles);
-  $filename = $pathInfo['filename'];
-  $ext = strtolower(pathinfo($htmlFiles, PATHINFO_EXTENSION));
-  $path_parts = pathinfo($htmlFiles, PATHINFO_EXTENSION);*/
   
 ?>
 <!DOCTYPE html>
@@ -1654,7 +1649,7 @@ Vvveb.themeBaseUrl = 'demo/landing/';
 <script src="libs/builder/components-widgets.js"></script>	
 
 <!-- sections-->
-<script src="libs/builder/sections.js"></script>
+<!--<script src="libs/builder/sections.js"></script>-->
 <script src="libs/builder/sections-bootstrap4.js"></script>
 
 <!-- blocks-->
@@ -1707,9 +1702,8 @@ if ($theme_data->theme_url == true) {
 $file = glob('../../../'.$theme_data->theme_url.'/*.*');
 				foreach ($file as $key => $page) {
 				  $supported_file = array(
-					  'html',
-					  'php'
-				  );
+					  'html'
+									  );
 				 $ext = strtolower(pathinfo($page, PATHINFO_EXTENSION));
 				 $path_parts = pathinfo($page, PATHINFO_EXTENSION);
 				 $pathInfo = pathinfo($page);
@@ -1740,8 +1734,7 @@ var pages =
 	$file = glob("../../../hw-includes/pages/*.*");
                 foreach ($file as $key => $page) {
                     $supported_file = array(
-                        'html',
-                        'php'
+                        'html'
                     );
                     $ext = strtolower(pathinfo($page, PATHINFO_EXTENSION));
                     $path_parts = pathinfo($page, PATHINFO_EXTENSION);

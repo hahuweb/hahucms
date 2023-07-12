@@ -61,5 +61,4 @@ class post extends dbConnect
         return $results;
     }
 
-    
 }

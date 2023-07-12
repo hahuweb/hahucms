@@ -16,7 +16,6 @@ class addpost extends dbConnect
     public $post_description;
     public $post_author;
     public $img;
-    public $img_url;
     public $post_date;
     public $error;
     public $conn;
@@ -29,8 +28,7 @@ class addpost extends dbConnect
         $this->post_category = filter_input(INPUT_POST, 'post_category');
         $this->post_description = filter_input(INPUT_POST, 'post_description');
         $this->post_author =  $_SESSION['ID'];
-        $this->img = filter_input(INPUT_POST, 'img');
-        $this->img_url = filter_input(INPUT_POST, 'img_url');
+        $this->img = str_replace("../", "", filter_input(INPUT_POST, 'img'));
         $this->error;
         $this->post_date = date("y-m-d");
     }
@@ -55,7 +53,9 @@ class addpost extends dbConnect
         $this->getValue();
         $this->validate();
         if (empty($this->error)) {
-            $tsql = "INSERT INTO hw_post (post_title, post_category, post_description, post_author, img, img_url, post_date) VALUES ('$this->post_title', '$this->post_category', '$this->post_description', '$this->post_author', '$this->img', '$this->img_url', '$this->post_date') ";
+            $tsql = "INSERT INTO hw_post (post_title, post_category, post_description, post_author, img, post_date) 
+            VALUES 
+            ('$this->post_title', '$this->post_category', '$this->post_description', '$this->post_author', '$this->img', '$this->post_date') ";
             mysqli_set_charset($this->conn, "utf8");
             $results = mysqli_query($this->conn, $tsql);
             if ($results == TRUE) {
@@ -75,7 +75,7 @@ class addpost extends dbConnect
         $this->getValue();
         $this->validate();
         if (empty($this->error)) {
-            $tsql = "UPDATE hw_post SET post_title='$this->post_title', post_category='$this->post_category',  post_description='$this->post_description', img='$this->img', img_url='$this->img_url'"
+            $tsql = "UPDATE hw_post SET post_title='$this->post_title', post_category='$this->post_category',  post_description='$this->post_description', post_author='$this->post_author', img='$this->img'"
                 . " WHERE post_id='$post_id' ";
             mysqli_set_charset($this->conn, "utf8");
             $result = $this->conn->query($tsql);

@@ -33,7 +33,7 @@ class blog extends dbConnect
         $results = mysqli_query($this->conn, $tsql);
         return $results;
     }
-    
+
     /**
      * Count post
      */
@@ -113,14 +113,18 @@ class blog extends dbConnect
                                     ?>
                                             <img src="<?php echo $user_post['user_img'] ?>" style="width: 40px;height:40px; border-radius:50px">
 
-                                        <?php
-                                        }
-                                        ?>
+                                            <?php
+                                                        } else {
+                                                        ?>
+                                                            <span class="fa-solid fa-user" style="font-size: 20px;"></span>
+                                                        <?php
+                                                        }
+                                                        ?>
                                 </span>
                                 <span class="text-muted small m-2">
                                 <?php
 
-                                        echo $user_post['username'];
+                                        echo ucfirst($user_post['username']);
                                     }
                                 ?>
                                 </span>
@@ -262,14 +266,18 @@ class blog extends dbConnect
                                         ?>
                                                 <img src="<?php echo $user_post['user_img'] ?>" style="width: 40px;height:40px; border-radius:50px">
 
-                                            <?php
-                                            }
-                                            ?>
+                                                <?php
+                                                        } else {
+                                                        ?>
+                                                            <span class="fa-solid fa-user" style="font-size: 20px;"></span>
+                                                        <?php
+                                                        }
+                                                        ?>
                                     </span>
                                     <span class="text-muted small m-2">
                                     <?php
 
-                                            echo $user_post['username'];
+                                            echo ucfirst($user_post['username']);
                                         }
                                     ?>
                                     </span>
@@ -329,14 +337,18 @@ class blog extends dbConnect
                                         ?>
                                                 <img src="<?php echo $user_post['user_img'] ?>" style="width: 40px;height:40px; border-radius:50px">
 
-                                            <?php
-                                            }
-                                            ?>
+                                                <?php
+                                                        } else {
+                                                        ?>
+                                                            <span class="fa-solid fa-user" style="font-size: 20px;"></span>
+                                                        <?php
+                                                        }
+                                                        ?>
                                     </span>
                                     <span class="text-muted small m-2">
                                     <?php
 
-                                            echo $user_post['username'];
+                                            echo ucfirst($user_post['username']);
                                         }
                                     ?>
                                     </span>
@@ -399,14 +411,18 @@ class blog extends dbConnect
                                     ?>
                                             <img src="<?php echo $user_post['user_img'] ?>" style="width: 40px;height:40px; border-radius:50px">
 
-                                        <?php
-                                        }
-                                        ?>
+                                            <?php
+                                                        } else {
+                                                        ?>
+                                                            <span class="fa-solid fa-user" style="font-size: 20px;"></span>
+                                                        <?php
+                                                        }
+                                                        ?>
                                 </span>
                                 <span class="text-muted small m-2">
                                 <?php
 
-                                        echo $user_post['username'];
+                                        echo ucfirst($user_post['username']);
                                     }
                                 ?>
                                 </span>

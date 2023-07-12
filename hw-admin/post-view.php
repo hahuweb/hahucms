@@ -24,7 +24,7 @@ include 'header.php';
 
                 <div class="row g-2 post-view">
                     <div class="col-lg-10">
-                        <img src="<?php echo $rows_post['img'] ?>" class="card-img-to" alt="...">
+                        <img src="../<?php echo $rows_post['img'] ?>" class="card-img-to" alt="...">
                         <div class="card-body align-items-center p-3 p-sm-4">
                             <h5><?php echo $rows_post['post_title'] ?></h5>
                             <br />
@@ -43,8 +43,12 @@ include 'header.php';
                                             $user_post = $post_users->fetch_assoc();
                                             if ($user_post['user_img'] == true) {
                                         ?>
-                                                <img src="<?php echo $user_post['user_img'] ?>" style="width: 40px;height:40px; border-radius:50px">
+                                                <img src="../<?php echo $user_post['user_img'] ?>" style="width: 40px;height:40px; border-radius:50px">
 
+                                            <?php
+                                            } else {
+                                            ?>
+                                                <span class="fa-solid fa-user" style="font-size: 20px;"></span>
                                             <?php
                                             }
                                             ?>
@@ -52,7 +56,7 @@ include 'header.php';
                                     <span class="text-muted small">
                                     <?php
 
-                                            echo $user_post['username'];
+                                            echo ucfirst($user_post['username']);
                                         }
                                     ?>
                                     </span>

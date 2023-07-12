@@ -6,7 +6,7 @@
  * Retrieves and creates the config.php file.
  */
 
-require '../function.php';
+require '../../hw-includes/function.php';
 require 'content.php';
 
 class start

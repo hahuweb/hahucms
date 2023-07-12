@@ -15,6 +15,9 @@ if ($themes_info->theme_url == true) {
     $footer = $pg->footer;
     $siteHeader = $site->page($footer);
 }
+
+/** Facebook messenger */
+$fbMessenger = $plugins->facebookMessenger();
 ?>
 
 <script src="hw-includes/assets/js/jquery-3.1.0.min.js"></script>

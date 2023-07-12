@@ -16,8 +16,6 @@ require 'header.php';
 /**
  *home page 
  */
-/*$home = $pg->home;
-$homePage = $site->page($home);*/
 if ($themes_info->theme_url == true) {
     $home = $pg->home;
     $siteHeader = $site->themePage($themes_info->theme_url, $home);

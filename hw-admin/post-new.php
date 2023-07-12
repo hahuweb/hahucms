@@ -48,7 +48,6 @@ include 'header.php';
                             </button>
                         </div>
                         <div class="p-2 flex-shrink-1 bd-highlight">
-                            <img src="" class="lb-img" id="lb-img"/>
                         </div>
                     </div>
                     <button class="btn float-end" type="button" data-bs-toggle="collapse" data-bs-target="#hidden_input">
@@ -63,9 +62,7 @@ include 'header.php';
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <label class="form-label">Image URL</label>
-                    <p></p>
-                    <input type="text" name="img_url" class="form-control" id="img_url">
+                <img src="" class="lb-img" id="lb-img"/>
 
                 </div>
                 <div class="col-lg-10">

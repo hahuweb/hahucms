@@ -31,7 +31,9 @@ class signup extends values
     public function insert()
     {
         if (empty($this->error)) {
-            $tsql = "INSERT INTO hw_users (username, email_phone, user_password, user_role, verification, last_login, user_location, user_device, user_status, login_at, reg_date) VALUES ('$this->username', '$this->email_phone', '$this->password_hash', '$this->user_role', '$this->verification', '$this->last_login', '$this->user_location', '$this->user_device', '$this->user_status', '$this->login_at', '$this->reg_date') ";
+            $tsql = "INSERT INTO hw_users (username, email_phone, user_password, user_role, verification, last_login, user_location, user_device, user_status, login_at, reg_date)
+             VALUES 
+             ('$this->username', '$this->email_phone', '$this->password_hash', '$this->user_role', '$this->verification', '$this->last_login', '$this->user_location', '$this->user_device', '$this->user_status', '$this->login_at', '$this->reg_date') ";
             mysqli_set_charset($this->conn, "utf8");
             $result = mysqli_query($this->conn, $tsql);
             if ($result == TRUE) {
@@ -53,7 +55,7 @@ class signup extends values
     }
 
     public function lastlogin() {
-        $this->last_login = date("y-m-d");
+        $this->last_login = date("Y-m-d");
         return $this->last_login;
     }
     public function role()
@@ -61,7 +63,6 @@ class signup extends values
         $this->user_role = 'Administrator';
         return $this->user_role;
     }
-
     public function verify()
     {
         $this->verification = 'OFF';
@@ -75,7 +76,7 @@ class signup extends values
     }
     public function loginAt()
     {
-        $this->login_at = date("y-m-d h:i:sa");
+        $this->login_at = date("Y-m-d H:i:sa");
         return $this->login_at;
     }
 }
@@ -148,7 +149,7 @@ class login extends values
 
     public function login_time()
     {
-        $this->login_at = date("y-m-d h:i:sa");
+        $this->login_at = date("Y-m-d H:i:sa");
         return $this->login_at;
     }
     public function update_active($id)

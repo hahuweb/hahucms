@@ -28,7 +28,7 @@ if (isset($_SESSION['ID'])) {
             <meta charset="UTF-8">
             <title>Hahu Web 
                 <?php
-                if (page_name() != 'index') {
+                if (page_name() != 'Index') {
                     echo '- ' . page_name();
                 }
                 ?>
@@ -57,7 +57,7 @@ if (isset($_SESSION['ID'])) {
 
         <body>
 
-            <!-- preloader
+            <!-- preloader 
             <div class="preloader">
                 <div class="d-flex justify-content-center">
                     <div class="spinner-border" role="status">
@@ -106,7 +106,7 @@ if (isset($_SESSION['ID'])) {
                                     <?php
                                     if ($row['user_img'] == TRUE) {
                                     ?>
-                                        <img class="img-circle" src="<?php echo $row['user_img']; ?>" />
+                                        <img class="img-circle" src="../<?php echo $row['user_img']; ?>" />
                                     <?php
                                     } else {
                                     ?>
@@ -122,13 +122,11 @@ if (isset($_SESSION['ID'])) {
                                             <?php
                                             if ($row['user_img'] == TRUE) {
                                             ?>
-                                                <img class="img-circle" src="<?php echo $row['user_img']; ?>" />
+                                                <img class="img-circle" src="../<?php echo $row['user_img']; ?>" />
                                             <?php
                                             } else {
                                             ?>
                                                 <p class="profileImg"></p>
-
-
                                             <?php
                                             }
                                             ?>
@@ -161,9 +159,9 @@ if (isset($_SESSION['ID'])) {
 
                         </div>
                     </div>
-                    <li>
+                    
                         <hr class="mb-1">
-                    </li>
+                    
                 </div>
                 <ul class="navbar-nav navbar-sidenav first-menu">
                     <li class="nav-item">

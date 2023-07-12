@@ -74,7 +74,7 @@ class pagesHandling extends dbConnect
             if (file_exists($this->pages_path . $this->full_page)) {
                 echo  '<div class="alert alert-warning alert-dismissible fade show" role="alert">File already exists in  directory  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
             } else {
-                $createFile = fopen($this->pages_path . $this->full_page, "w") or die("There a problem");
+                $createFile = fopen($this->pages_path . $this->full_page, "w") or die(" Problem with creating a page. Please check PHP create file permissions.");
                 if ($createFile == true) {
                     redirect('pages.php');
                 }
@@ -127,7 +127,7 @@ class pagesHandling extends dbConnect
             if (file_exists($this->theme_pagespath . $this->full_page)) {
                 echo  '<div class="alert alert-warning alert-dismissible fade show" role="alert">File already exists in  directory  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
             } else {
-                $createFile = fopen($this->theme_pagespath . $this->full_page, "w") or die("There a problem");
+                $createFile = fopen($this->theme_pagespath . $this->full_page, "w") or die(" Problem with creating a page. Please check PHP create file permissions.");
                 if ($createFile == true) {
                     redirect('pages.php');
                 }

@@ -213,7 +213,7 @@ $media = new medias();
                     <div class="col-10 col-md-5 col-lg-4">
                         <div class="card">
                             <a href="post-view.php?post_id=<?php echo $rows_post['post_id'] ?>" style="width:100%">
-                                <img src="<?php echo $rows_post['img'] ?>" class="card-img-to" alt="..." style="width:100%">
+                                <img src="../<?php echo $rows_post['img'] ?>" class="card-img-to" alt="..." style="width:100%">
                             </a>
                             <div class="card-body align-items-center p-3 p-sm-4">
                                 <h5 class="card-title"><?php echo $rows_post['post_title'] ?></h5>
@@ -230,18 +230,22 @@ $media = new medias();
 
                                                 if ($user_post['user_img'] == true) {
                                             ?>
-                                                    <img src="<?php echo $user_post['user_img'] ?>" style="width: 40px;height:40px; border-radius:50px">
+                                                    <img src="../<?php echo $user_post['user_img'] ?>" style="width: 40px;height:40px; border-radius:50px">
 
-                                                <?php
-                                                }
-                                                ?>
+                                                    <?php
+                                                            }else{
+                                                                ?>
+                                                                <span class="fa-solid fa-user" style="font-size: 20px;"></span>
+                                                                <?php
+                                                            }
+                                                            ?>
 
 
                                         </span>
                                         <span class="text-muted small">
                                         <?php
 
-                                                echo $user_post['username'];
+                                                echo ucfirst($user_post['username']);
                                             }
                                         ?>
                                         </span>

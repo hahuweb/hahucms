@@ -200,7 +200,7 @@ $forms = new dataValues();
                             <label class="form-label">Favicon</label>
                             <div class="d-flex bd-highlight">
                                 <div class="p-2 flex-grow-1 bd-highlight">
-                                    <img src="<?php echo $siteInfo->favicon; ?>" class="lb-img rounded-circle" id="lb-img" style="width: 50px;height:50px" />
+                                    <img src="../<?php echo $siteInfo->favicon; ?>" class="lb-img rounded-circle" id="lb-img" style="width: 50px;height:50px" />
                                     <input type="text" id="result" class="form-control" name="favicon" value="<?php echo $siteInfo->favicon; ?>" hidden>
                                 </div>
                                 <div class=" p-2 bd-highlight">

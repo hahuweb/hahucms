@@ -31,7 +31,7 @@ include 'header.php';
 
                     ?>
                         <tr>
-                            <td><?php echo $row_users['username']; ?></td>
+                            <td><?php echo ucfirst($row_users['username']); ?></td>
                             <td>
                                 <?php
                                // echo $row_users['login_at'];

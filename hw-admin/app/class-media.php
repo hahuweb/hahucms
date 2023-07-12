@@ -163,13 +163,14 @@ class medias
                                             <?php
                                             $protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"],0,strpos( $_SERVER["SERVER_PROTOCOL"],'/'))).'://';
                                             $server_name = $_SERVER["SERVER_NAME"];
-                                            $img_path = $protocol.$server_name . str_replace("../", "", $value);
+                                            $img_path = $protocol.$server_name . "/" . str_replace("../", "", $value);
+                                            $path = $value;
                                             ?>
                                         </p>
 
                                     </div>
                                     <div class="p-2 flex-shrink-1 bd-highlight">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" class="user_img check_img" value="<?php echo $img_path; ?>" >
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" class="user_img check_img" value="<?php echo $path; ?>" >
                                     </div>
                                 </div>
                             </div>

@@ -34,7 +34,7 @@ if ($result_tb->num_rows == true) {
 } else {
 
     // Create all tables
-    $query = file_get_contents('../../hw-includes/sql/table.sql');
+    $query = file_get_contents('../sql/table.sql');
     if ($conn->multi_query($query) === true) {
         redirect('welcome.php');
     } else {

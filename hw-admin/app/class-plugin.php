@@ -41,8 +41,6 @@ class plugins extends dbConnect
 
         foreach ($plugin as $f) {
             if (is_dir($this->plugin_path . $f)) {
-                $delName = $f;
-                $folder_path = $this->plugin_path . $f;
 ?>
                 <div class="col-lg-6">
                     <div class="card mb-3 md-card plugins">
@@ -83,7 +81,7 @@ class plugins extends dbConnect
 
 
 /**
- * Private name
+ * plugins name
  */
     public function name($f)
     {

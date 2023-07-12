@@ -42,15 +42,15 @@ Vvveb.Sections.add("hero/hero-1", {
 
   <div class="container">
     <div class="row align-items-center justify-content-between">
-      <div class="col-lg-6 mb-5 ms-5" data-aos="fade-up" data-aos-delay="0">
-        <h1 class="heading text-white">The next generation website builder</h1>
-        <p class="text-white-50 mb-5">Powerful and easy to use drag and drop website builder for blogs, presentation or ecommerce stores.</p>
+      <div class="col-lg-6 mb-5 ms-5">
+        <h1 class="heading">The next generation website builder</h1>
+        <p class=" mb-5">Powerful and easy to use drag and drop website builder for blogs, presentation or ecommerce stores.</p>
         <p>
-          <a href="#" class="btn btn-white">Free Download</a>
-          <a href="#" class="btn text-white">Live Demo</a>
+          <a href="#" class="btn">Free Download</a>
+          <a href="#" class="btn">Live Demo</a>
         </p>
       </div>
-      <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-5">
         <a href="https://www.youtube.com/watch?v=3xsP3u-CVO4" class="video-wrap glightbox">
           <span class="play-button">
             <i class="la la-play"></i>

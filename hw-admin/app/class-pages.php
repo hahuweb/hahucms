@@ -25,7 +25,11 @@ class pages extends dbConnect
         $this->pagesPath();
         echo "" . count($this->pages_path) . " pages";
     }
-
+    public function countP()
+    {
+        $count = count($this->pages_path);
+        return $count;
+    }
     public function pagesFolder() {
         return $this->pages_folder;
     }
@@ -43,15 +47,18 @@ class pages extends dbConnect
         $this->themePath($path);
         echo "" . count($this->theme_pages) . " pages";
     }
-
+public function themeP() {
+    
+    $count = count($this->theme_pages);
+    return $count;
+}
     // displaying all media files
     public function displayPages()
     {
         foreach ($this->pages_path as $key => $pages) {
 
             $supported_file = array(
-                'html',
-                'php'
+                'html'
             );
             $ext = strtolower(pathinfo($pages, PATHINFO_EXTENSION));
             $path_parts = pathinfo($pages, PATHINFO_EXTENSION);
@@ -100,8 +107,7 @@ class pages extends dbConnect
         foreach ($this->theme_pages as $key => $pages) {
 
             $supported_file = array(
-                'html',
-                'php'
+                'html'
             );
             $ext = strtolower(pathinfo($pages, PATHINFO_EXTENSION));
             $path_parts = pathinfo($pages, PATHINFO_EXTENSION);

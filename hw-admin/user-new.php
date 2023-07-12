@@ -69,8 +69,8 @@ include 'header.php';
                     <div class="col-lg-5">
                         <label class="form-label">Tow step varification</label>
                         <select class="form-select" name="verification">
-                            <option selected value="ON">ON</option>
-                            <option value="OFF">OFF</option>
+                            <option selected value="OFF">OFF</option>
+                            <option value="ON">ON</option>
                         </select>
                     </div>
                 </div>
@@ -95,7 +95,7 @@ include 'header.php';
                         <div class="collapse navbar-collapse" id="hidden_input">
                             <br />
                             <br />
-                            <input type="text" id="result" class="form-control" name="img">
+                            <input type="text" id="result" class="form-control" name="user_img">
                         </div>
                     </div>
                 </div>

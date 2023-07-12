@@ -21,21 +21,21 @@ require_once ABSPATH . '../../hw-includes/config/config.php';
 
 
 // Database connection
-require_once ABSPATH . '../../hw-includes/config/class-db.php';
+require_once ABSPATH . '../app/class-db.php';
 
 // Data
-require_once ABSPATH . '../../hw-includes/app/class-users.php';
-require_once ABSPATH . '../../hw-includes/app/class-data.php';
-require_once ABSPATH . '../../hw-includes/app/class-pages.php';
-require_once ABSPATH . '../../hw-includes/app/class-media.php';
-require_once ABSPATH . '../../hw-includes/app/class-theme.php';
+require_once ABSPATH . '../app/class-users.php';
+require_once ABSPATH . '../app/class-data.php';
+require_once ABSPATH . '../app/class-pages.php';
+require_once ABSPATH . '../app/class-media.php';
+require_once ABSPATH . '../app/class-theme.php';
 
 // controllers 
-require_once ABSPATH . '../../hw-includes/controllers/class-values.php';
-require_once ABSPATH . '../../hw-includes/controllers/class-users.php';
-require_once ABSPATH . '../../hw-includes/controllers/class-table.php';
-require_once ABSPATH . '../../hw-includes/controllers/class-pages.php';
-require_once ABSPATH . '../../hw-includes/controllers/class-edit.php';
+require_once ABSPATH . '../controllers/class-values.php';
+require_once ABSPATH . '../controllers/class-users.php';
+require_once ABSPATH . '../controllers/class-table.php';
+require_once ABSPATH . '../controllers/class-pages.php';
+require_once ABSPATH . '../controllers/class-edit.php';
 
 // Function
 require_once ABSPATH . '../../hw-includes/function.php';

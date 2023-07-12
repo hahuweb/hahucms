@@ -48,7 +48,7 @@ include 'header.php';
         </div>
         <div class="py-2"></div>
 
-        
+
         <?php
         $formPost = new addpost();
 
@@ -69,7 +69,7 @@ include 'header.php';
                             <div class="col-lg-6">
                                 <div class="card">
                                     <a href="post-view.php?post_id=<?php echo $rows_view['post_id'] ?>" style="width:100%">
-                                        <img src="<?php echo $rows_view['img'] ?>" class="card-img-to" alt="..." style="width:100%">
+                                        <img src="../<?php echo $rows_view['img'] ?>" class="card-img-to" alt="..." style="width:100%">
                                     </a>
                                     <div class="card-body align-items-center p-3 p-sm-4">
                                         <h5 class="card-title"><?php echo $rows_view['post_title'] ?></h5>
@@ -84,17 +84,21 @@ include 'header.php';
                                                     if ($user_post->num_rows == TRUE) {
                                                         $user_post = $post_users->fetch_assoc();
                                                         if ($user_post['user_img'] == true) {
-                                                            ?>
-                                                                <img src="<?php echo $user_post['user_img'] ?>" style="width: 40px;height:40px; border-radius:50px">
-            
-                                                            <?php
-                                                            }
-                                                            ?>
+                                                    ?>
+                                                            <img src="../<?php echo $user_post['user_img'] ?>" style="width: 40px;height:40px; border-radius:50px">
+
+                                                        <?php
+                                                        } else {
+                                                        ?>
+                                                            <span class="fa-solid fa-user" style="font-size: 20px;"></span>
+                                                        <?php
+                                                        }
+                                                        ?>
                                                 </span>
                                                 <span class="text-muted small">
                                                 <?php
 
-                                                        echo $user_post['username'];
+                                                        echo ucfirst($user_post['username']);
                                                     }
                                                 ?>
                                                 </span>
@@ -139,7 +143,7 @@ include 'header.php';
                             <div class="col-lg-6">
                                 <div class="card">
                                     <a href="post-view.php?post_id=<?php echo $rows_desc['post_id'] ?>" style="width:100%">
-                                        <img src="<?php echo $rows_desc['img'] ?>" class="card-img-to" alt="..." style="width:100%">
+                                        <img src="../<?php echo $rows_desc['img'] ?>" class="card-img-to" alt="..." style="width:100%">
                                     </a>
                                     <div class="card-body align-items-center p-3 p-sm-4">
                                         <h5 class="card-title"><?php echo $rows_desc['post_title'] ?></h5>
@@ -154,17 +158,21 @@ include 'header.php';
                                                     if ($user_post->num_rows == TRUE) {
                                                         $user_post = $post_users->fetch_assoc();
                                                         if ($user_post['user_img'] == true) {
-                                                            ?>
-                                                                <img src="<?php echo $user_post['user_img'] ?>" style="width: 40px;height:40px; border-radius:50px">
-            
-                                                            <?php
-                                                            }
-                                                            ?>
+                                                    ?>
+                                                            <img src="../<?php echo $user_post['user_img'] ?>" style="width: 40px;height:40px; border-radius:50px">
+
+                                                        <?php
+                                                        } else {
+                                                        ?>
+                                                            <span class="fa-solid fa-user" style="font-size: 20px;"></span>
+                                                        <?php
+                                                        }
+                                                        ?>
                                                 </span>
                                                 <span class="text-muted small">
                                                 <?php
 
-                                                        echo $user_post['username'];
+                                                        echo ucfirst($user_post['username']);
                                                     }
                                                 ?>
                                                 </span>
@@ -197,20 +205,19 @@ include 'header.php';
                                     </div>
                                 </div>
                             </div>
-                    <?php
+                        <?php
                         }
                     }
-
                 } else {
 
                     if ($rows_post->num_rows == TRUE) {
                         while ($rows_post = $get_post->fetch_assoc()) {
                             $post_id = $rows_post['post_id'];
-                    ?>
+                        ?>
                             <div class="col-lg-6">
                                 <div class="card">
                                     <a href="post-view.php?post_id=<?php echo $rows_post['post_id'] ?>" style="width:100%">
-                                        <img src="<?php echo $rows_post['img'] ?>" class="card-img-to" alt="..." style="width:100%">
+                                        <img src="../<?php echo $rows_post['img'] ?>" class="card-img-to" alt="..." style="width:100%">
                                     </a>
                                     <div class="card-body align-items-center p-3 p-sm-4">
                                         <h5 class="card-title"><?php echo $rows_post['post_title'] ?></h5>
@@ -225,17 +232,21 @@ include 'header.php';
                                                     if ($user_post->num_rows == TRUE) {
                                                         $user_post = $post_users->fetch_assoc();
                                                         if ($user_post['user_img'] == true) {
-                                                            ?>
-                                                                <img src="<?php echo $user_post['user_img'] ?>" style="width: 40px;height:40px; border-radius:50px">
-            
-                                                            <?php
-                                                            }
-                                                            ?>
+                                                    ?>
+                                                            <img src="../<?php echo $user_post['user_img'] ?>" style="width: 40px;height:40px; border-radius:50px">
+
+                                                        <?php
+                                                        } else {
+                                                        ?>
+                                                            <span class="fa-solid fa-user" style="font-size: 20px;"></span>
+                                                        <?php
+                                                        }
+                                                        ?>
                                                 </span>
                                                 <span class="text-muted small">
                                                 <?php
 
-                                                        echo $user_post['username'];
+                                                        echo ucfirst($user_post['username']);
                                                     }
                                                 ?>
                                                 </span>
@@ -268,7 +279,7 @@ include 'header.php';
                                     </div>
                                 </div>
                             </div>
-                    <?php
+                <?php
                         }
                     } else {
                         echo '<p>Blog post display here</p>';

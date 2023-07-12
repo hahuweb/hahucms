@@ -121,8 +121,7 @@ class site extends dbConnect
         $this->pageValues();
         foreach ($this->pages_path as $key => $pages) {
             $supported_file = array(
-                'html',
-                'php'
+                'html'
             );
             $ext = strtolower(pathinfo($pages, PATHINFO_EXTENSION));
             $path_parts = pathinfo($pages, PATHINFO_EXTENSION);
@@ -142,8 +141,7 @@ class site extends dbConnect
         $this->themeValues($path);
         foreach ($this->themes_path as $key => $pages) {
             $supported_file = array(
-                'html',
-                'php'
+                'html'
             );
             $ext = strtolower(pathinfo($pages, PATHINFO_EXTENSION));
             $path_parts = pathinfo($pages, PATHINFO_EXTENSION);
@@ -158,7 +156,7 @@ class site extends dbConnect
         }
     }
 
-
+    
     /**
      * Blog Data
      */

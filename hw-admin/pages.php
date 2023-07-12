@@ -58,23 +58,27 @@ $pagesHandle = new pagesHandling;
             <div class="py-3"></div>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" id="media_form">
                 <?php
-                ?>
-                <div class="table-responsive">
-                    <table class="table align-middle table-striped">
-                        <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Size</th>
-                            <th scope="col">Edit</th>
-                            <th scope="col">Rename</th>
-                        </tr>
-                        <?php
-                        $display = $pages->displayThemePages();
-                        ?>
-                    </table>
-                </div>
-                <?php
+                if ($pages->themeP() != 0) {
 
+                ?>
+                    <div class="table-responsive">
+                        <table class="table align-middle table-striped">
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Size</th>
+                                <th scope="col">Edit</th>
+                                <th scope="col">Rename</th>
+                            </tr>
+                            <?php
+                            $display = $pages->displayThemePages();
+                            ?>
+                        </table>
+                    </div>
+                <?php
+                } else {
+                    echo 'Pages display here';
+                }
                 ?>
                 <div class="col-md-6">
                     <button class="btn btn-danger btn-delete" type="submit" name="delete_theme">Delete
@@ -152,23 +156,27 @@ $pagesHandle = new pagesHandling;
             <div class="py-3"></div>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" id="media_form">
                 <?php
-                ?>
-                <div class="table-responsive">
-                    <table class="table align-middle table-striped">
-                        <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Size</th>
-                            <th scope="col">Edit</th>
-                            <th scope="col">Rename</th>
-                        </tr>
-                        <?php
-                        $display = $pages->displayPages();
-                        ?>
-                    </table>
-                </div>
-                <?php
+                if ($pages->countP() != 0) {
 
+                ?>
+                    <div class="table-responsive">
+                        <table class="table align-middle table-striped">
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Size</th>
+                                <th scope="col">Edit</th>
+                                <th scope="col">Rename</th>
+                            </tr>
+                            <?php
+                            $display = $pages->displayPages();
+                            ?>
+                        </table>
+                    </div>
+                <?php
+                } else {
+                    echo 'Pages display here';
+                }
                 ?>
                 <div class="col-md-6">
                     <button class="btn btn-danger btn-delete" type="submit" name="delete_page">Delete

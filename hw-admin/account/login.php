@@ -98,7 +98,7 @@ $limit = $limit->setting();
 
         // Signup users
         if (isset($_POST['signup'])) {
-            $login = new signup;
+            $signup = new signup;
         }
         ?>
 

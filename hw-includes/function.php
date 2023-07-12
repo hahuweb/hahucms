@@ -15,7 +15,7 @@
      $page_name = $_SERVER["PHP_SELF"];
      $pathInfo = pathinfo($page_name);
      $filename = $pathInfo['filename'];
-     return $filename;
+     return ucfirst($filename);
  }
 
  /**

@@ -51,10 +51,11 @@ class values extends dbConnect
         $this->hash = password_hash($this->new_password, PASSWORD_DEFAULT);
         $this->user_role = filter_input(INPUT_POST, 'user_role');
         $this->verification = filter_input(INPUT_POST, 'verification');
-        $this->last_login = date("y-m-d");
+        $this->last_login = date("Y-m-d");
         // $this->user_location;
         //$this->user_device;
-        $this->user_img = filter_input(INPUT_POST, 'user_img');
+        $this->user_img = str_replace("../", "", filter_input(INPUT_POST, 'user_img'));
+        
         // $this->user_status;
         //$this->login_at = date("h:i:sa");
         //$this->otp;
@@ -63,7 +64,6 @@ class values extends dbConnect
         $this->login_attempt;
         //$this->locked =  $_SESSION['locked'];
         $this->firstname = filter_input(INPUT_POST, 'firstname');
-
         $this->error;
     }
 
